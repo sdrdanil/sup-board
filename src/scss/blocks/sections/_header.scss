@@ -1,0 +1,65 @@
+.header {
+  &__inner {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    padding-top: 5.0rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10.2rem;
+
+    @include narrow-desktop {
+      gap: 8.0rem;
+    }
+
+    @include laptop {
+      gap: 6.0rem;
+    }
+
+    @include tablet {
+      gap: initial;
+      justify-content: space-between;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: 1.0rem;
+      padding-top: .4rem;
+    }
+  }
+
+  &__button {
+    position: relative;
+    left: -.1rem;
+    top: .1rem;
+  }
+
+  &__tel-place {
+    position: relative;
+    width: 12.1rem;
+    padding-right: .9rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  &__tel {
+    white-space: nowrap;
+    font-size: 2.0rem;
+    line-height: 4rem;
+    transition: .2s ease;
+
+    @include mobile {
+      @include text-shadow-outline(.2rem, .4rem, rgba(#FFF, .9));
+    }
+
+    @include on-hover {
+      font-size: 2.4rem;
+    }
+  }
+}

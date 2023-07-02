@@ -1,0 +1,41 @@
+.decor {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url('@img/forest-dark.svg');
+    width: 100%;
+    height: 45.6rem;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &--one {
+    height: 18.0rem;
+    background: $color-dark;
+
+    &::before {
+      bottom: -4.4rem;
+    }
+
+    &::after {
+      top: -4.8rem;
+      transform: rotate(180deg);
+    }
+  }
+
+  &--two {
+    &::before {
+      z-index: 1;
+      background-image: url('@img/forest-white.svg');
+      top: -17.5rem;
+    }
+
+    &::after {
+      top: -8.9rem;
+      transform: rotate(180deg);
+    }
+  }
+}

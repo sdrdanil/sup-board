@@ -1,0 +1,157 @@
+.gallery {
+  --ratio: 1;
+  --container: 1200px;
+  --base-height: calc(270 / 1200) * var(--container);
+  padding: 15.0rem 0;
+
+  @include narrow-desktop {
+    --ratio: calc(992 / 1200);
+    --container: 992px;
+  }
+
+  @include laptop {
+    --ratio: calc(768 / 1200);
+    --container: 768px;
+    padding: 110px 0;
+  }
+
+  @include tablet {
+    --ratio: calc(90vw / 1200px);
+    --container: 90vw;
+  }
+
+
+  &__tile {
+    display: grid;
+    grid-template-columns: 30.0rem 16.0rem 29.0rem 39.0rem;
+    grid-template-rows: 34.0rem 27.0rem 27.0rem;
+    justify-items: stretch;
+    align-items: stretch;
+    gap: calc(20 / 1200 * var(--container));
+
+    @include narrow-desktop {
+      grid-template-columns: 1.87fr 1fr 1.81fr 2.44fr;
+      grid-template-rows: calc(1.26 * var(--base-height)) var(--base-height) var(--base-height);
+    }
+
+    @include tablet {
+      grid-template-columns: 2.3fr 1fr 1fr 2.4fr;
+      grid-template-rows: calc(1.26 * var(--base-height)) var(--base-height) var(--base-height) calc(1.26 * var(--base-height));
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    position: relative;
+
+    &--1 {
+      grid-column: span 2;
+    }
+
+    &--2 {
+      grid-column: span 2;
+      border-radius: 0 calc(500 / 1200 * var(--container)) 0 0;
+    }
+
+    &--3 {
+      border-radius: 0 0 calc(150 / 1200 * var(--container)) 0;
+    }
+
+    &--4 {
+      grid-column: span 2;
+      border-radius: 0 calc(200 / 1200 * var(--container)) 0 0;
+    }
+
+    &--5 {
+      border-radius: calc(200 / 1200 * var(--container)) 0 0 0;
+    }
+
+    &--6 {
+      padding-right: .9rem;
+      border-radius: 0 0 0 calc(200 / 1200 * var(--container));
+      background: $color-blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include narrow-desktop {
+        padding-left: 2.0rem;
+        padding-right: 0;
+        padding-bottom: 2.0rem;
+      }
+
+      @include tablet {
+        padding-left: 1.0rem;
+        padding-right: .5rem;
+        padding-bottom: 1.0rem;
+      }
+    }
+
+    &--7 {
+      grid-column: span 3;
+      border-radius: 0 0 0 calc(200 / 1200 * var(--container));
+    }
+  }
+
+  &__title {
+    max-width: 20.0rem;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+    text-align: center;
+    color: $color-white;
+
+    @include laptop {
+      width: 15.0rem;
+      font-size: 2.4rem;
+      line-height: 3.0rem;
+    }
+
+    @include tablet {
+      font-size: 4vw;
+      line-height: 4.5vw;
+    }
+  }
+}
+
+@include tablet {
+  .gallery__item {
+    max-height: 24.0rem;
+
+    &--1 {
+      order: 2;
+      grid-column: span 2;
+    }
+
+    &--2 {
+      order: 1;
+      grid-column: span 4;
+    }
+
+    &--3 {
+      order: 6;
+      grid-column: span 1;
+    }
+
+    &--4 {
+      order: 3;
+      grid-column: span 2;
+    }
+
+    &--5 {
+      order: 4;
+      grid-column: span 1;
+    }
+
+    &--6 {
+      order: 5;
+      grid-column: span 2;
+    }
+
+    &--7 {
+      order: 7;
+      grid-column: span 4;
+    }
+  }
+}

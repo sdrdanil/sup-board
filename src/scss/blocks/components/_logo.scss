@@ -1,0 +1,20 @@
+.logo {
+  transition: .3s ease;
+  cursor: pointer;
+
+  &--header {
+    color: $color-dark;
+    width: 15.4rem;
+    height: 5.7rem;
+  }
+
+  &--footer {
+    color: $color-white;
+    width: 37.1rem;
+    height: 8.2rem;
+  }
+
+  @include on-hover {
+    color: $color-blue;
+  }
+}

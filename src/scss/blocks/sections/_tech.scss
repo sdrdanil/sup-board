@@ -1,0 +1,143 @@
+.tech {
+  position: relative;
+  background-image: url('@img/tech.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  &__inner {
+    padding-top: 73.6rem;
+    padding-bottom: 26.0rem;
+
+    @include narrow-desktop {
+      padding-bottom: 10.0rem;
+    }
+
+    @include tablet {
+      padding-bottom: 6.0rem;
+    }
+  }
+
+  &__title {
+    padding-right: 60%;
+
+    @include breakpoint-down(430px) {
+      font-size: 11vw;
+      line-height: 14vw;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.0rem;
+
+    @include laptop {
+      flex-direction: column;
+    }
+  }
+
+  &__description {
+    padding-top: 6.2rem;
+    display: flex;
+    flex-direction: column;
+
+    @include laptop {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 2.0rem;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      margin-bottom: 10.0rem;
+    }
+  }
+
+  &__list {
+    margin-bottom: 20.0rem;
+    padding-left: 2.0rem;
+    white-space: nowrap;
+
+    @include tablet {
+      margin-bottom: 10.0rem;
+    }
+
+    @include mobile {
+      white-space: normal;
+    }
+    
+  }
+
+  &__item {
+    padding-left: 2.0rem;
+    font-weight: 700;
+    font-size: 2.0rem;
+    line-height: 2.4rem;
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    max-width: 35.0rem;
+    text-shadow: .2rem .2rem .7rem white;
+  }
+
+  &__video {
+    position: absolute;
+    right: 35.4rem;
+    top: 47.6rem;
+    color: $color-white;
+
+    @include narrow-desktop {
+      right: 26%;
+    }
+
+    @include mobile {
+      right: 16%;
+    }
+  }
+
+  &__gallery {
+    padding: 6.9rem 2.8rem 5.3rem;
+    border: .3rem solid $color-dark;
+    border-radius: 20.0rem 0 30.0rem;
+    display: grid;
+    grid-template-columns: 48.3rem 20.8rem;
+    grid-template-rows: 43.2rem 30.0rem;
+    gap: 2.3rem 2.8rem;
+    position: relative;
+
+    @include narrow-desktop {
+      padding: 7.7% 3.6% 5.9%;
+      border-radius: 20.0rem 0 30.0rem;
+      border-radius: 24% 0 36%;
+      grid-template-columns: 2.32fr 1fr;
+      grid-template-rows: 1.44fr 1fr;
+    }
+
+    @include laptop {
+      display: grid;
+    }
+  }
+
+  &__image-wrapper {
+    overflow: hidden;
+
+    &--1 {
+      grid-area: 1 / span 2;
+      border-radius: 40.0rem 0 0 0;
+    }
+    
+    &--2 {
+      border-radius: 0 0 0 30.0rem;
+    }
+
+    &--3 {
+      position: relative;
+      z-index: -1;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @extend %text-size;
+  font-family: $font-family-text;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.container {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+
+  @include narrow-desktop {
+    width: 992px;
+  }
+
+  @include laptop {
+    width: 768px;
+  }
+
+  @include tablet {
+    width: 90vw;
+  }
+
+  @include mobile {
+    width: 90vw;
+  }
+}
+
+// .header,
+// .hero,
+// .decor,
+// .info,
+// .selling,
+// .tech,
+// .gallery,
+// .footer,
+.none {
+  display: none !important;
+}

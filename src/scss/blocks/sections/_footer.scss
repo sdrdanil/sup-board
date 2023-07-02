@@ -1,0 +1,111 @@
+.footer {
+  padding: 10.2rem 0 8.3rem;
+  background: $color-dark;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 3.0rem;
+    white-space: nowrap;
+  }
+
+  &__logo {
+    position: relative;
+    top: -1.3rem;
+    margin-bottom: 8.0rem;
+  }
+
+  &__form {
+    order: -1;
+    width: 50.0rem;
+    margin-bottom: 9.8rem;
+
+    @include laptop {
+      order: initial;
+    }
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+
+  &__input {
+    margin-bottom: 6.0rem;
+
+    &:last-of-type {
+      margin-bottom: 4.7rem;
+    }
+  }
+
+  &__instagram {
+    flex-basis: 100%;
+    margin-bottom: 4.8rem;
+  }
+
+  &__text {
+    @extend %text-size;
+    font-weight: 700;
+    color: $color-white;
+  }
+
+  &__gallery {
+    padding-top: 2.7rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 6vw;
+    }
+  }
+
+  &__gallery-item {
+    width: 26.0rem;
+    height: 26.0rem;
+
+    @include narrow-desktop {
+      width: 21.5rem;
+      height: 21.5rem;
+    }
+
+    @include laptop {
+      width: 16.6rem;
+      height: 16.6rem;
+    }
+
+    @include tablet {
+      width: 40vw;
+      height: 40vw;
+    }
+
+    @include mobile {
+      width: 88vw;
+      height: 88vw;
+    }
+  }
+
+  &__list-links {
+    flex-basis: 100%;
+    padding: 0 .5rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 2.6rem;
+    }
+  }
+
+  &__link {
+    transition: .3s ease;
+
+    @include on-hover {
+      color: $color-blue;
+    }
+  }
+}

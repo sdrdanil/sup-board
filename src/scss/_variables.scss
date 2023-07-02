@@ -1,0 +1,47 @@
+$color-white: #FFFFFF;
+$color-dark: #262C27;
+$color-green: #B9C400;
+$color-blue: #0093A1;
+
+$font-family-text: 'Inter', sans-serif;
+$font-family-title: 'Comfortaa', cursive;
+$font-family-button: 'Comfortaa', cursive;
+
+%text-size {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+
+@mixin on-hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin styling-autofill($text-color) {
+  &:-webkit-autofill,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    transition: background-color 10000s ease-in-out 0s;
+    -webkit-text-fill-color: $text-color;
+    caret-color: $text-color;
+    @content;
+  }
+
+  @include on-hover {
+    transition: background-color 10000s ease-in-out 0s;
+    -webkit-text-fill-color: $text-color;
+    caret-color: $text-color;
+    @content;
+  }
+}
+
+@mixin text-shadow-outline($offset, $blur-radius, $color) {
+  text-shadow: 
+    $offset $offset $blur-radius $color,
+    (-$offset) $offset $blur-radius $color,
+    $offset (-$offset) $blur-radius $color,
+    (-$offset) (-$offset) $blur-radius $color;
+}

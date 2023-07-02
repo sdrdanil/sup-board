@@ -1,0 +1,156 @@
+.hero {
+  background-image: url('@img/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+
+  @include tablet {
+    background-position-x: 43%;
+  }
+
+  @include mobile {
+    background-position-x: 34%;
+  }
+
+  &__inner {
+    position: relative;
+    height: 86.0rem;
+
+    @include tablet {
+      height: 80.0rem;
+    }
+
+    @include mobile {
+      height: 70.0rem;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    right: 4.5rem;
+    top: 36.2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+
+    @include laptop {
+      @include text-shadow-outline(.1rem, .5rem, rgba(#000, .3));
+    }
+
+    @include tablet {
+      top: 28.0rem;
+      right: 0;
+      max-width: 48.0rem;
+    }
+
+    @include mobile {
+      top: 21.5rem;
+    }
+  }
+
+  &__title-text {
+    position: relative;
+
+    &--one {
+      top: .3rem;
+      left: .1rem;
+    }
+
+    &--two {
+      right: .8rem;
+    }
+  }
+
+  &__slogan {
+    position: absolute;
+    right: 14.2rem;
+    bottom: -9.1rem;
+
+    @include laptop {
+      right: 2.0rem;
+    }
+
+    @include tablet {
+      bottom: initial;
+      top: 73.5rem;
+      width: 100%;
+    }
+
+    @include mobile {
+      top: 65.0rem;
+      right: 0;
+    }
+  }
+
+  &__slogan-title {
+    white-space: nowrap;
+    
+  }
+
+  &__span {
+    position: relative;
+    opacity: .3;
+
+    @include tablet {
+      position: absolute;
+    }
+
+    &--first {
+      z-index: 1;
+      left: -5.8rem;
+
+      @include laptop {
+        left: -2.0rem;
+      }
+
+      @include tablet {
+        left: 0;
+      }
+    }
+
+    &--last {
+      top: -14.1rem;
+
+      @include tablet {
+        right: 0;
+      }
+
+      @include mobile {
+        top: -10.5rem;
+      }
+    }
+  } 
+
+  &__slogan-text {
+    position: absolute;
+    z-index: 1;
+    right: -.5rem;
+    top: 3.7rem;
+    width: 35.9rem;
+    display: inline-block;
+
+    font-family: $font-family-text;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+    text-align: center;
+    color: $color-blue;
+
+    @include tablet {
+      right: -4.2rem;
+      top: 2.7rem;
+      width: 26.0rem;
+      font-size: 2.8rem;
+      line-height: 3.0rem;
+    }
+
+    @include mobile {
+      right: 0;
+      top: 11.0rem;
+      width: 100%;
+      padding: 0 10%;
+    }
+  }
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function isWebp() {
+      function testWebP(callback) {
+        var webP = new Image();
+        webP.onload = webP.onerror = function () {
+          callback(webP.height == 2);
+        };
+        webP.src =
+          'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+      }
+
+      testWebP(function (support) {
+        if (support == true) {
+          document.querySelector('html').classList.add('webp');
+        } else {
+          document.querySelector('html').classList.add('no-webp');
+        }
+      });
+    }
+
+    isWebp();
+  </script>
+  <link href="css/style.min.css" rel="stylesheet">
+  <script defer src="js/app.min.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <title>Sup board</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <svg class="logo logo--header">
+          <use href="@img/icons/logo-header.svg#logo-header"></use>
+        </svg>
+        <button class="header__button button button--header" type="button">BUY</button>
+        <div class="header__tel-place">
+          <a class="header__tel" href="tel:+17777777">+1 777 77 77</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__title">
+            <h1 class="title title--size--lg">RAY AIR POCKET</h1>
+            <p class="hero__title-text hero__title-text--one title title--size--sm">INFLATABLE SUP BOARD</p>
+            <p class="hero__title-text hero__title-text--two title title--size--sm">SIZES: 11'6"X31"</p>
+          </div>
+          <div class="hero__slogan">
+            <h2 class="hero__slogan-title title title--size--xl title--color--blue">
+              <span class="hero__span hero__span--first">FREE</span>
+              <span class="hero__span hero__span--last">DOM</span>
+            </h2>
+            <p class="hero__slogan-text">PACK SMALL FOR BIG ADVENTURES</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="decor decor--one"></div>
+
+    <section class="info">
+      <div class="container">
+        <div class="info__top">
+          <div class="info__box info__box--one">
+            <p class="info__text">
+              After our well received Fly Air Pocket Edition we’re adding the respective touring iSUP to our Range – the
+              Ray Air Pocket Edition! The ultra travel-friendly touring iSUP is built in a tough but light construction
+              that allows it to be packed into a backpack half the size of a regular iSUP.
+            </p>
+            <a class="popup popup--video" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" data-fancybox>
+              <svg class="popup__play">
+                <use href="@img/icons/play.svg#play"></use>
+              </svg>
+              <span class="popup__text">Play video</span>
+            </a>
+          </div>
+          <div class="info__box info__box--two">
+            <p class="info__text">
+              With a thinner deck pad and tough but flexible construction, the Ray Air Pocket Edition can be rolled and
+              packed into a much narrower bag, making it extremely easy to store and transport. Based on our highly
+              versatile Ray Air 11’6’’, the efficient shape is packed with volume - offering safe, stable paddling and
+              superb glide – which makes it the perfect iSUP for everyone paddling some distance. With its minimal
+              weight and dimensions nothing comes close the convenient handling of our Pocket Edition iSUPs!
+            </p>
+          </div>
+          <div class="info__box info__box--three">
+            <div class="info__image-wrapper">
+              <img src="@img/sup-boards.png" alt="Sup boards">
+            </div>
+          </div>
+        </div>
+
+        <div class="info__bottom">
+          <h3 class="info__bottom-title title title--size--md">SPECS</h3>
+          <dl class="info__details">
+            <dt class="info__details-title">BOARD</dt>
+            <dd class="info__details-description">RAY AIR POCKET 11'6"X31"</dd>
+            <dt class="info__details-title">VOLUME</dt>
+            <dd class="info__details-description">299 L</dd>
+            <dt class="info__details-title">WIDTH</dt>
+            <dd class="info__details-description">31" / 78.7 CM</dd>
+            <dt class="info__details-title">LENGTH</dt>
+            <dd class="info__details-description">11'6'' / 350.5 CM</dd>
+            <dt class="info__details-title">THICKNESS</dt>
+            <dd class="info__details-description">6” / 15 CM</dd>
+            <dt class="info__details-title">WEIGHT</dt>
+            <dd class="info__details-description">8.5 KG</dd>
+            <dt class="info__details-title">FITTINGS</dt>
+            <dd class="info__details-description">2X FCS FIN SYSTEM / 2 X 4.5" CLICK FIN</dd>
+            <dt class="info__details-title">REC. USER WEIGHT</dt>
+            <dd class="info__details-description">UP TO 100 KG</dd>
+            <dt class="info__details-title">MASTFOOT INSERT</dt>
+            <dd class="info__details-description">NO</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="selling">
+      <div class="container">
+        <div class="selling__inner">
+          <h3 class="selling__title title title--size--md title--color--blue">RAY AIR POCKET</h3>
+          <div class="selling__description">
+            <dl class="selling__details">
+              <dt class="selling__details-title">CLICK FINS</dt>
+              <dd class="selling__details-description">
+                Comes with two 4.5’’ Click Fins – no tools required – fit and remove in seconds
+              </dd>
+              <dt class="selling__details-title">REDUCED DECK PAD</dt>
+              <dd class="selling__details-description">
+                Reduced area deck pad in standing area to aid packing
+              </dd>
+              <dt class="selling__details-title">BACKPACK</dt>
+              <dd class="selling__details-description">
+                Compact Pocket backpack with easy entry zipper for board, paddle, pump and accessories (fits paddle and
+                also regular pump)
+              </dd>
+              <dt class="selling__details-title">TOURING SHAPE</dt>
+              <dd class="selling__details-description selling__details-description--shorter">
+                Tried and tested shape based on our popular Ray Air 11’6’’
+              </dd>
+              <dt class="selling__details-title">EXTREMELY PORTABLE</dt>
+              <dd class="selling__details-description selling__details-description--shorter">
+                Extremely portable, the ultimate travel companion
+              </dd>
+            </dl>
+            <div class="selling__price">590 €</div>
+            <button class="button button--selling" type="button">BUY</button>
+          </div>
+          <div class="selling__photo">
+            <img src="@img/selling.png" alt="photo">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tech">
+      <div class="decor decor--two"></div>
+      <div class="container">
+        <div class="tech__inner">
+          <h3 class="tech__title title title--size--md title--color--dark">MICRO TECHNOLOGY</h3>
+          <div class="tech__content">
+            <div class="tech__description">
+              <ol class="tech__list">
+                <li class="tech__item">First PVC rail layer </li>
+                <li class="tech__item">Second PVC rail layer </li>
+                <li class="tech__item">Thin diamond grooving split&#8209;pad</li>
+                <li class="tech__item">Strong Tarpaulin layer </li>
+                <li class="tech__item">V-Drop Stitch core</li>
+              </ol>
+              <p class="tech__text">
+                Our new Micro technology provides a featherweight and quality construction that can be rolled and packed
+                into a backpack half the width of a standard iSUP package. The reduced pad and our twin Click Fin system
+                make it possible to have a regular sized iSUP packed into minimal space.
+              </p>
+            </div>
+            <div class="tech__gallery">
+              <div class="tech__image-wrapper tech__image-wrapper--1">
+                <img src="@img/content/tech-1.jpg" alt="tech-1">
+              </div>
+              <div class="tech__image-wrapper tech__image-wrapper--2">
+                <img src="@img/content/tech-2.jpg" alt="tech-2">
+              </div>
+              <div class="tech__image-wrapper tech__image-wrapper--3">
+                <img src="@img/content/tech-3.jpg" alt="tech-3">
+              </div>
+            </div>
+          </div>
+          <div class="tech__video">
+            <a class="popup popup--video" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" data-fancybox>
+              <svg class="popup__play">
+                <use href="@img/icons/play.svg#play"></use>
+              </svg>
+              <span>Play video</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <div class="container">
+        <div class="gallery__tile">
+          <div class="gallery__item gallery__item--1">
+            <img src="@img/content/gallery-1.jpg" alt="Gallery image">
+          </div>
+          <div class="gallery__item gallery__item--2">
+            <img src="@img/content/gallery-2.jpg" alt="Gallery image">
+          </div>
+          <div class="gallery__item gallery__item--3">
+            <img src="@img/content/gallery-3.jpg" alt="Gallery image">
+          </div>
+          <div class="gallery__item gallery__item--4">
+            <img src="@img/content/gallery-4.jpg" alt="Gallery image">
+          </div>
+          <div class="gallery__item gallery__item--5">
+            <img src="@img/content/gallery-5.jpg" alt="Gallery image">
+          </div>
+          <div class="gallery__item gallery__item--6">
+            <h3 class="gallery__title">
+              ENJOY YOUR&nbsp;LIFE
+            </h3>
+          </div>
+          <div class="gallery__item gallery__item--7">
+            <img src="@img/content/gallery-6.jpg" alt="Gallery image">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <svg class="footer__logo logo logo--footer">
+          <use href="@img/icons/logo-footer.svg#logo-footer"></use>
+        </svg>
+        <form class="footer__form form">
+          <h3 class="footer__title title title--size--md">CONTACT&nbsp;US</h3>
+          <div class="footer__input form__wrapper">
+            <input class="form__input" id="name" type="text" required>
+            <label class="form__label" for="name">NAME</label>
+          </div>
+          <div class="footer__input form__wrapper">
+            <input class="form__input" id="email" type="email" required>
+            <label class="form__label" for="email">E-MAIL</label>
+          </div>
+          <button class="button button--footer" type="submit">SEND</button>
+        </form>
+        <div class="footer__instagram">
+          <h4 class="footer__text">INSTAGRAM</h4>
+          <div class="footer__gallery">
+            <div class="footer__gallery-item">
+              <img src="@img/content/instagram-1.jpg" alt="Photo from instagram">
+            </div>
+            <div class="footer__gallery-item">
+              <img src="@img/content/instagram-2.jpg" alt="Photo from instagram">
+            </div>
+            <div class="footer__gallery-item">
+              <img src="@img/content/instagram-3.jpg" alt="Photo from instagram">
+            </div>
+            <div class="footer__gallery-item">
+              <img src="@img/content/instagram-4.jpg" alt="Photo from instagram">
+            </div>
+          </div>
+        </div>
+        <ul class="footer__list-links">
+          <li class="footer__list-item">
+            <a class="footer__text footer__link" href="#">COPYRIGHT 2022</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__text footer__link" href="#">ALL RIGHTS RESERVED</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__text footer__link" href="#">COOKIE SETTINGS</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__text footer__link" href="#">PRIVACY STATEMENTS</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__text footer__link" href="#">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

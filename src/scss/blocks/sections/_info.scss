@@ -1,0 +1,137 @@
+.info {
+  padding: 33.5rem 0 5.0rem;
+  color: $color-white;
+  background-image: url('@img/info.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include laptop {
+    padding-top: 26.0rem;
+  }
+
+  @include tablet {
+    background-position-x: 40%;
+  }
+
+  @include mobile {
+    background-position-x: 35%;
+  }
+
+  &__top {
+    margin-bottom: 60.4rem;
+    display: flex;
+    align-items: stretch;
+    gap: 8.2rem;
+
+    @include narrow-desktop {
+      justify-content: space-around;
+      gap: 6.0rem;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      gap: 7.0rem;
+      margin-bottom: 40.0rem;
+    }
+  }
+
+  &__box {
+    position: relative;
+    width: 29.3rem;
+
+    @include laptop {
+      width: 100%;
+    }
+
+    &--one {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      @include tablet {
+        flex-direction: row;
+        gap: 3.0rem;
+        align-items: flex-start;
+      }
+    }
+
+    &--two {
+      padding-bottom: 3.0rem;
+      border-bottom: .1rem solid $color-white;
+    }
+
+    &--three {
+      align-self: flex-end;
+
+      @include laptop {
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    @include mobile {
+      text-shadow: .2rem .2rem .2rem black;
+    }
+  }
+
+  &__image-wrapper {
+    position: absolute;
+    left: -.1rem;
+    bottom: -.7rem;
+    height: 65.0rem;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    gap: 17.2rem;
+
+    @include laptop {
+      flex-direction: column;
+      gap: 5.0rem;
+    }
+  }
+
+  &__bottom-title {
+    padding-top: 1.3rem;
+  }
+
+  &__details {
+    padding: 3.0rem 0 2.8rem;
+    border-top: .1rem solid $color-white;
+    border-bottom: .1rem solid $color-white;
+    font-weight: 700;
+    display: grid;
+    grid-template-columns: minmax(19.2rem, max-content) max-content;
+    gap: 1.5rem 2.5rem;
+    white-space: nowrap;
+
+    @include tablet {
+      grid-template-columns: max-content max-content;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 0;
+      white-space: normal;
+    }
+  }
+
+  &__details-description {
+    @include mobile {
+      margin-bottom: 1.6rem;
+      font-weight: 400;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
